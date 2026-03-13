@@ -290,7 +290,10 @@ async def get_bikes(
     
     # Filter by city if specified
     if city:
-        data = [s for s in data if city.lower() in s.get('name', '').lower()]
+        # Check both station_name and city fields
+        data = [s for s in data if 
+                city.lower() in s.get('station_name', '').lower() or
+                city.lower() in s.get('city', '').lower()]
     
     # Limit results
     data = data[:limit]

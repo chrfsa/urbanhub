@@ -166,9 +166,11 @@ class BikesCollector:
         for network in france_networks:
             city = network.get('location', {}).get('city', '')
             
-            # Filter by cities if specified
-            if target_cities and city not in target_cities:
-                continue
+            # Filter by cities if specified - use case-insensitive partial match
+            if target_cities:
+                city_match = any(city.lower() in c.lower() or c.lower() in city.lower() for c in target_cities)
+                if not city_match:
+                    continue
             
             logger.debug(f"Fetching network: {network.get('name')} - {city}")
             
