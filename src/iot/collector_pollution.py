@@ -47,7 +47,11 @@ class PollutionCollector:
         
         api_key = self.config.get("api_key")
         if api_key:
-            self.session.headers.update({"apikey": api_key})
+            # OpenAQ v3 uses X-API-Key header
+            self.session.headers.update({"X-API-Key": api_key})
+            logger.info(f"Using OpenAQ API key: {api_key[:10]}...")
+        else:
+            logger.warning("No OpenAQ API key found in config")
         
         # French cities with coordinates for simulation
         self.french_cities = {

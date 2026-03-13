@@ -33,9 +33,10 @@ ENV/
 *.swo
 *~
 
-# Environment variables
+# Environment variables (NEVER commit real .env files!)
 .env
 .env.local
+.env.*.local
 
 # Data (optional - comment if you want to track data)
 # data/
