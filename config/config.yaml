@@ -1,0 +1,157 @@
+# UrbanHub - Configuration
+# Smart City Data Platform
+
+# Application
+app:
+  name: UrbanHub
+  version: 1.0.0
+  environment: development
+
+# Data directories
+data:
+  root: ./data
+  raw:
+    weather: ./data/raw/weather
+    bikes: ./data/raw/bikes
+    pollution: ./data/raw/pollution
+  bronze:
+    weather: ./data/bronze/weather
+    bikes: ./data/bronze/bikes
+    pollution: ./data/bronze/pollution
+  silver:
+    weather: ./data/silver/weather
+    bikes: ./data/silver/bikes
+    pollution: ./data/silver/pollution
+  gold:
+    weather_daily: ./data/gold/weather_daily
+    bikes_hourly: ./data/gold/bikes_hourly
+    pollution_daily: ./data/gold/pollution_daily
+    cross_analysis: ./data/gold/cross_analysis
+
+# Logging
+logging:
+  level: INFO
+  format: "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+  file:
+    enabled: true
+    directory: ./logs
+    rotation: 10 MB
+    retention: 7 days
+
+# Database
+database:
+  host: localhost
+  port: 5432
+  name: urbanhub
+  user: urbanhub
+  password: changeme
+  pool_size: 5
+  echo: false
+
+# Redis
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+  decode_responses: true
+
+# API Endpoints
+apis:
+  noaa:
+    base_url: https://www.ncei.noaa.gov/data/global-hourly/access/
+    timeout: 30
+    max_retries: 3
+    retry_delay: 5
+    parallel_downloads: 20
+    countries:
+      - FR
+    years:
+      start: 1990
+      end: 2024
+
+  citybikes:
+    base_url: https://api.citybik.es/v2/
+    timeout: 10
+    cities:
+      - Paris
+      - Lyon
+      - Marseille
+      - Toulouse
+      - Bordeaux
+      - Nantes
+      - Strasbourg
+      - Montpellier
+      - Nice
+      - Lille
+    collection_interval: 60  # seconds
+
+  openaq:
+    base_url: https://api.openaq.org/v3/
+    timeout: 15
+    api_key: ${OPENAQ_API_key}
+    countries:
+      - FR
+    pollutants:
+      - PM2.5
+      - PM10
+      - O3
+      - NO2
+      - CO
+    collection_interval: 600  # seconds
+    limit: 1000
+
+# ETL Settings
+etl:
+  batch_size: 10000
+  chunk_size: 5000
+  compression: snappy
+  validation:
+    enabled: true
+    strict: false
+
+# Weather specific
+weather:
+  columns_to_keep:
+    - STATION
+    - DATE
+    - TMP
+    - WND
+    - PRCP
+    - SLP
+    - VIS
+  columns_rename:
+    STATION: station_id
+    DATE: timestamp
+    TMP: temperature
+    WND: wind_speed
+    PRCP: precipitation
+    SLP: pressure
+    VIS: visibility
+
+# Bikes specific
+bikes:
+  fields_to_extract:
+    - station_id
+    - station_name
+    - latitude
+    - longitude
+    - bikes_available
+    - free_slots
+
+# Pollution specific
+pollution:
+  fields_to_extract:
+    - sensor_id
+    - sensor_name
+    - latitude
+    - longitude
+    - pollutant
+    - value
+    - unit
+    - timestamp
+  thresholds:
+    PM2.5: 25  # μg/m³
+    PM10: 50   # μg/m³
+    O3: 120    # μg/m³
+    NO2: 40    # μg/m³
+    CO: 10000  # μg/m³

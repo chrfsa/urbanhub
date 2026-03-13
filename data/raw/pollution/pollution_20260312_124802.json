@@ -1,0 +1,902 @@
+[
+  {
+    "location": "Paris - PM2.5",
+    "city": "Paris",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.81456556095822,
+      "longitude": 2.327906286357538
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 14.23,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Paris - PM10",
+    "city": "Paris",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.837643998975054,
+      "longitude": 2.3785137078392866
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 39.35,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Paris - O3",
+    "city": "Paris",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.840816685252726,
+      "longitude": 2.3594729046208163
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 42.8,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Paris - NO2",
+    "city": "Paris",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.890448023245824,
+      "longitude": 2.3765994248345947
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 20.85,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Paris - CO",
+    "city": "Paris",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.852982967018285,
+      "longitude": 2.3299261109181604
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 444.72,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lyon - PM2.5",
+    "city": "Lyon",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 45.76748752684433,
+      "longitude": 4.855814808942041
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 41.92,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lyon - PM10",
+    "city": "Lyon",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 45.7418493120291,
+      "longitude": 4.8586617134863666
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 32.16,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lyon - O3",
+    "city": "Lyon",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 45.8004111453467,
+      "longitude": 4.863585027859829
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 41.1,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lyon - NO2",
+    "city": "Lyon",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 45.74467215924657,
+      "longitude": 4.8598702674328385
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 41.48,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lyon - CO",
+    "city": "Lyon",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 45.78604898659891,
+      "longitude": 4.848599956395102
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 658.17,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Marseille - PM2.5",
+    "city": "Marseille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.32242010462401,
+      "longitude": 5.41767867010911
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 20.08,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Marseille - PM10",
+    "city": "Marseille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.30756012677798,
+      "longitude": 5.350945480328675
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 31.94,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Marseille - O3",
+    "city": "Marseille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.26506410825673,
+      "longitude": 5.354316656453269
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 26.77,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Marseille - NO2",
+    "city": "Marseille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.291391076439176,
+      "longitude": 5.387743074701537
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 19.39,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Marseille - CO",
+    "city": "Marseille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.24658742177324,
+      "longitude": 5.358227534001867
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 783.11,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Toulouse - PM2.5",
+    "city": "Toulouse",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.58572365046675,
+      "longitude": 1.4898527207108194
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 18.76,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Toulouse - PM10",
+    "city": "Toulouse",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.63385166525426,
+      "longitude": 1.4445272237709825
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 53.51,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Toulouse - O3",
+    "city": "Toulouse",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.55941238435982,
+      "longitude": 1.4745209281776972
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 54.71,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Toulouse - NO2",
+    "city": "Toulouse",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.57663996050471,
+      "longitude": 1.486868518561975
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 40.28,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Toulouse - CO",
+    "city": "Toulouse",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.622591032275,
+      "longitude": 1.4183635851202983
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 764.86,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Bordeaux - PM2.5",
+    "city": "Bordeaux",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 44.80838049279155,
+      "longitude": -0.6197034110547822
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 26.92,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Bordeaux - PM10",
+    "city": "Bordeaux",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 44.872638813403896,
+      "longitude": -0.5581103113201229
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 18.81,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Bordeaux - O3",
+    "city": "Bordeaux",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 44.81655042353016,
+      "longitude": -0.5825135580025855
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 33.75,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Bordeaux - NO2",
+    "city": "Bordeaux",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 44.8762643371836,
+      "longitude": -0.5796744771077093
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 44.25,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Bordeaux - CO",
+    "city": "Bordeaux",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 44.86536288090003,
+      "longitude": -0.5949137523310017
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 508.33,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nantes - PM2.5",
+    "city": "Nantes",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 47.20513277182431,
+      "longitude": -1.5869364956823684
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 13.77,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nantes - PM10",
+    "city": "Nantes",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 47.18666950243319,
+      "longitude": -1.5801431383679012
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 12.97,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nantes - O3",
+    "city": "Nantes",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 47.2107130106452,
+      "longitude": -1.5955655447373733
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 42.2,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nantes - NO2",
+    "city": "Nantes",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 47.21886117313216,
+      "longitude": -1.6004851141550218
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 37.99,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nantes - CO",
+    "city": "Nantes",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 47.22617182329615,
+      "longitude": -1.5082475609546933
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 515.88,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Strasbourg - PM2.5",
+    "city": "Strasbourg",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.58185629286762,
+      "longitude": 7.7358707664190165
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 7.89,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Strasbourg - PM10",
+    "city": "Strasbourg",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.54196413425455,
+      "longitude": 7.801657649258573
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 14.65,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Strasbourg - O3",
+    "city": "Strasbourg",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.61695907864847,
+      "longitude": 7.705586077013138
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 97.43,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Strasbourg - NO2",
+    "city": "Strasbourg",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.55130813881659,
+      "longitude": 7.754752962294694
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 24.18,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Strasbourg - CO",
+    "city": "Strasbourg",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 48.52408048198109,
+      "longitude": 7.7348694919709375
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 237.95,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Montpellier - PM2.5",
+    "city": "Montpellier",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.650596512706954,
+      "longitude": 3.8287417541632167
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 18.56,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Montpellier - PM10",
+    "city": "Montpellier",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.65652842189039,
+      "longitude": 3.89829171587343
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 32.36,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Montpellier - O3",
+    "city": "Montpellier",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.65872105533451,
+      "longitude": 3.865914923208719
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 60.98,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Montpellier - NO2",
+    "city": "Montpellier",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.58856743849464,
+      "longitude": 3.8859111689330317
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 44.02,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Montpellier - CO",
+    "city": "Montpellier",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.562915814212666,
+      "longitude": 3.8812684684198024
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 531.34,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nice - PM2.5",
+    "city": "Nice",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.70311261259674,
+      "longitude": 7.2150523208090265
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 35.56,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nice - PM10",
+    "city": "Nice",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.7193380921088,
+      "longitude": 7.293563720544123
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 30.58,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nice - O3",
+    "city": "Nice",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.72476930021339,
+      "longitude": 7.271919561061202
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 67.87,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nice - NO2",
+    "city": "Nice",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.69896605476123,
+      "longitude": 7.225180132434834
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 11.73,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Nice - CO",
+    "city": "Nice",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 43.73972281851963,
+      "longitude": 7.259805512314559
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 415.94,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lille - PM2.5",
+    "city": "Lille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 50.65084578037255,
+      "longitude": 3.0210705655715384
+    },
+    "parameter": {
+      "id": 342,
+      "name": "PM2.5",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 43.89,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lille - PM10",
+    "city": "Lille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 50.59393953081177,
+      "longitude": 3.0490594700708873
+    },
+    "parameter": {
+      "id": 94,
+      "name": "PM10",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 23.28,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lille - O3",
+    "city": "Lille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 50.6088018963609,
+      "longitude": 3.0282278801897173
+    },
+    "parameter": {
+      "id": 917,
+      "name": "O3",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 73.69,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lille - NO2",
+    "city": "Lille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 50.60835867077777,
+      "longitude": 3.015212301666328
+    },
+    "parameter": {
+      "id": 118,
+      "name": "NO2",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 53.65,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  },
+  {
+    "location": "Lille - CO",
+    "city": "Lille",
+    "country": "FR",
+    "coordinates": {
+      "latitude": 50.595057039195645,
+      "longitude": 3.0193175594366317
+    },
+    "parameter": {
+      "id": 431,
+      "name": "CO",
+      "unit": "\u03bcg/m\u00b3",
+      "average": true
+    },
+    "value": 786.72,
+    "datetime": "2026-03-12T12:48:02.936442Z",
+    "timestamp": 1773316082.936442
+  }
+]

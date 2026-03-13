@@ -1,0 +1,49 @@
+# UrbanHub - Dependencies
+# Smart City Data Platform
+
+## Data Collection
+requests
+aiohttp
+httpx
+beautifulsoup4
+
+## Data Processing
+pandas
+polars
+pyarrow
+numpy
+
+## Data Storage
+sqlalchemy
+psycopg2-binary
+redis
+
+## Orchestration
+schedule
+apscheduler
+
+## API Server
+fastapi
+uvvicorn
+
+## Visualization
+streamlit
+plotly
+altair
+folium
+
+## Utils
+python-dotenv
+pydantic
+loguru
+tqdm
+pyyaml
+
+## Testing
+pytest
+pytest-cov
+
+## Jupyter
+jupyter
+ipykernel
+nbformat
