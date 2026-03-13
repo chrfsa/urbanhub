@@ -277,17 +277,25 @@ def show_bikes():
     # Map
     st.subheader("🗺️ Carte des Stations")
     if 'latitude' in bikes_df.columns and 'longitude' in bikes_df.columns:
-        bikes_df['lat'] = bikes_df['latitude']
-        bikes_df['lon'] = bikes_df['longitude']
+        # Filter out null coordinates
+        map_df = bikes_df.dropna(subset=['latitude', 'longitude'])
+        map_df = map_df[map_df['latitude'] != 0]
         
-        hover_col = 'station_name' if 'station_name' in bikes_df.columns else 'station_id'
-        
-        fig = px.scatter_mapbox(bikes_df.head(200), lat='lat', lon='lon',
-                               size='bikes_available', color='bikes_available',
-                               hover_name=hover_col, zoom=5, center={"lat": 46.6, "lon": 2.5},
-                               mapbox_style="carto-positron",
-                               title="Stations de vélos en France")
-        st.plotly_chart(fig, use_container_width=True)
+        if map_df.empty:
+            st.warning("Aucune donnée de géolocalisation disponible pour cette ville.")
+        else:
+            map_df = map_df.copy()
+            map_df['lat'] = map_df['latitude']
+            map_df['lon'] = map_df['longitude']
+            
+            hover_col = 'station_name' if 'station_name' in map_df.columns else 'station_id'
+            
+            fig = px.scatter_mapbox(map_df.head(200), lat='lat', lon='lon',
+                                   size='bikes_available', color='bikes_available',
+                                   hover_name=hover_col, zoom=5, center={"lat": 46.6, "lon": 2.5},
+                                   mapbox_style="carto-positron",
+                                   title="Stations de vélos en France")
+            st.plotly_chart(fig, use_container_width=True)
     
     # Tables
     col1, col2 = st.columns(2)

@@ -126,6 +126,10 @@ class BikesCollector:
         location = station.get('location', {})
         position = station.get('position', {})
         
+        # CityBikes API returns lat/lon directly on station
+        lat = station.get('latitude') or position.get('latitude') or location.get('latitude')
+        lon = station.get('longitude') or position.get('longitude') or location.get('longitude')
+        
         # Extract timestamp
         timestamp = datetime.now()
         
@@ -136,8 +140,8 @@ class BikesCollector:
             'network_name': network_info.get('name', ''),
             'city': network_info.get('location', {}).get('city', ''),
             'country': network_info.get('location', {}).get('country', ''),
-            'latitude': position.get('latitude') or location.get('latitude'),
-            'longitude': position.get('longitude') or location.get('longitude'),
+            'latitude': lat,
+            'longitude': lon,
             'bikes_available': station.get('free_bikes', 0),
             'empty_slots': station.get('empty_slots', 0),
             'free_slots': station.get('empty_slots', 0),
