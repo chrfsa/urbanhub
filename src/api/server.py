@@ -109,7 +109,7 @@ pollution_collector = None
 running = False
 
 
-def collect_bikes_continuously(interval: int = 60):
+def collect_bikes_continuously(interval: int = 600):
     """Background thread to collect bike data."""
     global bikes_collector, running
     
@@ -167,7 +167,7 @@ async def lifespan(app: FastAPI):
     
     # Get config
     config = get_config()
-    bikes_interval = config.get('apis.citybikes.collection_interval', 60)
+    bikes_interval = config.get('apis.citybikes.collection_interval', 600)
     pollution_interval = config.get('apis.openaq.collection_interval', 600)
     
     # Start background threads

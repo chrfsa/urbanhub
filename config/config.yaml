@@ -83,7 +83,7 @@ apis:
       - Montpellier
       - Nice
       - Lille
-    collection_interval: 60  # seconds
+    collection_interval: 600  # seconds (10 minutes)
 
   openaq:
     base_url: https://api.openaq.org/v3/

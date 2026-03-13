@@ -25,7 +25,7 @@ class StreamingRunner:
         """Initialize streaming runner."""
         self.config = get_config()
         self.bikes_config = self.config.get("apis.citybikes", {})
-        self.interval = self.bikes_config.get("collection_interval", 60)
+        self.interval = self.bikes_config.get("collection_interval", 600)
         
         self.collector = BikesCollector()
         self.running = False

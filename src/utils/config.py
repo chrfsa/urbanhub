@@ -126,7 +126,7 @@ class Config:
                     "base_url": "https://api.citybik.es/v2/",
                     "timeout": 10,
                     "cities": ["Paris", "Lyon", "Marseille", "Toulouse", "Bordeaux", "Nantes"],
-                    "collection_interval": 60
+                    "collection_interval": 600
                 },
                 "openaq": {
                     "base_url": "https://api.openaq.org/v2/",
