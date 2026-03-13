@@ -85,7 +85,7 @@ class WeatherProcessor:
         Parse NOAA temperature value.
         
         Args:
-            value: Temperature string (e.g., "2506" = 25.06°C)
+            value: Temperature string (e.g., "+0026,1" = 2.6°C)
             
         Returns:
             Temperature in Celsius
@@ -94,7 +94,10 @@ class WeatherProcessor:
             return None
         
         try:
-            temp = float(value)
+            # Handle NOAA format: +0026,1 -> 2.6°C
+            # Remove +, -, and replace comma with decimal point
+            clean_value = str(value).replace('+', '').replace('-', '').replace(',', '.')
+            temp = float(clean_value)
             # Convert from tenths of degree
             return temp / 10.0
         except (ValueError, TypeError):
@@ -160,7 +163,7 @@ class WeatherProcessor:
         Parse NOAA pressure value.
         
         Args:
-            value: Pressure string
+            value: Pressure string (e.g., "10311,1" = 1031.1 hPa)
             
         Returns:
             Pressure in hPa
@@ -169,7 +172,12 @@ class WeatherProcessor:
             return None
         
         try:
-            pressure = float(value)
+            # Handle format: "10311,1" -> 1031.1 hPa
+            # Take first part before comma
+            clean_value = str(value).split(',')[0]
+            if clean_value in ['99999', '9999', '']:
+                return None
+            pressure = float(clean_value)
             if pressure < 99999:
                 return pressure / 10.0  # Convert from tenths
             return None
@@ -181,7 +189,7 @@ class WeatherProcessor:
         Parse NOAA visibility value.
         
         Args:
-            value: Visibility string
+            value: Visibility string (e.g., "004300,1,9,9")
             
         Returns:
             Visibility in meters
@@ -190,7 +198,12 @@ class WeatherProcessor:
             return None
         
         try:
-            vis = float(value)
+            # Handle format: "004300,1,9,9" -> 4300 meters
+            # Take first part before comma
+            clean_value = str(value).split(',')[0]
+            if clean_value in ['999999', '']:
+                return None
+            vis = float(clean_value)
             if vis < 999999:
                 return vis  # Already in meters
             return None
