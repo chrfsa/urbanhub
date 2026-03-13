@@ -278,7 +278,7 @@ async def health():
 @app.get("/api/bikes")
 async def get_bikes(
     city: Optional[str] = Query(None, description="Filter by city name"),
-    limit: int = Query(100, ge=1, le=5000)
+    limit: int = Query(5000, ge=1, le=10000)
 ):
     """Get current bike station data."""
     result = data_store.get_bikes()

@@ -176,6 +176,9 @@ class BikesCollector:
             
             stations = self.get_network_stations(network.get('id', ''))
             
+            # Rate limiting - wait between API calls to avoid 429 errors
+            time.sleep(0.5)
+            
             for station in stations:
                 station_data = self.collect_station_data(station, network)
                 all_stations.append(station_data)
