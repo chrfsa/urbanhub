@@ -251,24 +251,26 @@ def show_bikes():
     city = st.selectbox("Ville", cities)
     
     bikes_df = fetch_bikes_from_api(city if city != "Tous" else None)
-    stats = fetch_bikes_stats()
     
     if bikes_df.empty:
         st.warning("Aucune donnée bikes disponible. Vérifiez que le serveur API tourne.")
         return
     
-    # Stats
-    if stats.get('success'):
-        s = stats.get('stats', {})
-        col1, col2, col3, col4 = st.columns(4)
-        with col1:
-            st.metric("Stations Total", s.get('total_stations', 0))
-        with col2:
-            st.metric("Vélos Disponibles", s.get('total_bikes_available', 0))
-        with col3:
-            st.metric("Places Libres", s.get('total_free_slots', 0))
-        with col4:
-            st.metric("Taux Utilisation", f"{s.get('utilization_rate', 0)}%")
+    # Calculate stats from filtered data
+    total_stations = len(bikes_df)
+    total_bikes = bikes_df['bikes_available'].sum() if 'bikes_available' in bikes_df.columns else 0
+    total_slots = bikes_df['free_slots'].sum() if 'free_slots' in bikes_df.columns else 0
+    utilization = (total_bikes / (total_bikes + total_slots) * 100) if (total_bikes + total_slots) > 0 else 0
+    
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Stations Total", total_stations)
+    with col2:
+        st.metric("Vélos Disponibles", total_bikes)
+    with col3:
+        st.metric("Places Libres", total_slots)
+    with col4:
+        st.metric("Taux Utilisation", f"{utilization:.2f}%")
     
     st.markdown("---")
     
@@ -292,10 +294,11 @@ def show_bikes():
     
     with col1:
         st.subheader("🚴 Stations les Plus Utilisées")
-        if stats.get('success'):
-            busiest = pd.DataFrame(stats.get('busiest_stations', []))
-            if not busiest.empty:
-                st.dataframe(busiest[['name', 'bikes', 'slots', 'usage']].head(10), use_container_width=True)
+        if not bikes_df.empty and 'bikes_available' in bikes_df.columns:
+            bikes_df['usage'] = bikes_df['bikes_available'] / bikes_df['total_slots'] * 100
+            busiest = bikes_df.nlargest(10, 'bikes_available')[['station_name', 'bikes_available', 'free_slots', 'usage']].copy()
+            busiest.columns = ['name', 'bikes', 'slots', 'usage']
+            st.dataframe(busiest, use_container_width=True)
     
     with col2:
         st.subheader("📋 Toutes les Stations")
