@@ -191,6 +191,9 @@ def show_weather():
     col1, col2, col3, col4 = st.columns(4)
     
     if 'temperature' in weather_df.columns:
+        # Filter out invalid temperatures (NOAA uses 999.9 for missing)
+        weather_df = weather_df[(weather_df['temperature'] > -50) & (weather_df['temperature'] < 50)]
+        
         with col1:
             st.metric("Température Moyenne", f"{weather_df['temperature'].mean():.1f}°C")
         with col2:
