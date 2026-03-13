@@ -133,15 +133,15 @@ def show_overview():
     with col1:
         st.subheader("🚲 Top 10 Stations - Vélos Disponibles")
         if not bikes_df.empty and 'bikes_available' in bikes_df.columns:
-            # Use station_id or name as the label
-            label_col = 'name' if 'name' in bikes_df.columns else ('station_id' if 'station_id' in bikes_df.columns else bikes_df.columns[0])
-            cols_to_use = ['bikes_available', label_col]
-            if 'free_slots' in bikes_df.columns:
-                cols_to_use.append('free_slots')
-            top = bikes_df.nlargest(10, 'bikes_available')[cols_to_use]
-            fig = px.bar(top, x='bikes_available', y=label_col, orientation='h',
-                        title="Stations avec le plus de vélos",
-                        color='bikes_available', color_continuous_scale='Greens')
+            # Use station_name for readable labels
+            label_col = 'station_name' if 'station_name' in bikes_df.columns else 'station_id'
+            top = bikes_df.nlargest(10, 'bikes_available')[['bikes_available', label_col, 'free_slots']].copy()
+            top.columns = ['Vélos', 'Station', 'Places']
+            
+            fig = px.bar(top, x='Vélos', y='Station', orientation='h',
+                        title="Stations avec le plus de vélos disponibles",
+                        color='Vélos', color_continuous_scale='Greens',
+                        hover_data=['Places'])
             st.plotly_chart(fig, use_container_width=True)
         else:
             st.info("En attente de données bikes...")
@@ -150,9 +150,24 @@ def show_overview():
         st.subheader("🌫️ Niveaux de Pollution par Polluant")
         if not pollution_df.empty:
             poll_stats = pollution_df.groupby('pollutant')['value'].mean().reset_index()
+            # Add AQI category
+            def get_aqi_level(val, pollutant):
+                if pollutant == 'PM2.5':
+                    return 'Bon' if val < 35 else ('Moyen' if val < 55 else ('Dégradé' if val < 75 else 'Mauvais'))
+                elif pollutant == 'PM10':
+                    return 'Bon' if val < 20 else ('Moyen' if val < 40 else ('Dégradé' if val < 60 else 'Mauvais'))
+                elif pollutant == 'NO2':
+                    return 'Bon' if val < 40 else ('Moyen' if val < 90 else ('Dégradé' if val < 120 else 'Mauvais'))
+                elif pollutant == 'O3':
+                    return 'Bon' if val < 60 else ('Moyen' if val < 100 else ('Dégradé' if val < 140 else 'Mauvais'))
+                return 'N/A'
+            
+            poll_stats['Niveau'] = poll_stats.apply(lambda x: get_aqi_level(x['value'], x['pollutant']), axis=1)
+            
             fig = px.bar(poll_stats, x='pollutant', y='value',
                         title="Moyenne des polluants (μg/m³)",
-                        color='value', color_continuous_scale='RdYlGn_r')
+                        color='value', color_continuous_scale='RdYlGn_r',
+                        hover_data=['Niveau'])
             st.plotly_chart(fig, use_container_width=True)
     
     # Weather chart
@@ -161,11 +176,35 @@ def show_overview():
         st.markdown("---")
         st.subheader("🌡️ Distribution des Températures")
         temp_data = weather_df.dropna(subset=['temperature'])
+        
         if not temp_data.empty:
+            # Temperature stats
+            col_temp1, col_temp2, col_temp3, col_temp4 = st.columns(4)
+            with col_temp1:
+                st.metric("Min", f"{temp_data['temperature'].min():.1f}°C")
+            with col_temp2:
+                st.metric("Moyenne", f"{temp_data['temperature'].mean():.1f}°C")
+            with col_temp3:
+                st.metric("Médiane", f"{temp_data['temperature'].median():.1f}°C")
+            with col_temp4:
+                st.metric("Max", f"{temp_data['temperature'].max():.1f}°C")
+            
+            # Histogram
             fig = px.histogram(temp_data, x='temperature',
-                              nbins=30, title="Températures en France",
-                              labels={'temperature': 'Température (°C)'})
+                              nbins=30, title="Distribution des températures en France",
+                              labels={'temperature': 'Température (°C)'},
+                              color_discrete_sequence=['#3498db'])
+            fig.update_layout(bargap=0.1)
             st.plotly_chart(fig, use_container_width=True)
+            
+            # Box plot by station if available
+            if 'station_id' in temp_data.columns:
+                top_stations = temp_data['station_id'].value_counts().head(5).index.tolist()
+                temp_top = temp_data[temp_data['station_id'].isin(top_stations)]
+                if not temp_top.empty:
+                    fig2 = px.box(temp_top, x='station_id', y='temperature',
+                                 title="Température par station (Top 5)")
+                    st.plotly_chart(fig2, use_container_width=True)
 
 
 # ============== PAGE: WEATHER (BATCH) ==============
